@@ -1,6 +1,6 @@
 {
   "name": "inputs",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "HTML form inputs with pure CSS and a little bit JS magic",
   "main": "gulpfile.js",
   "scripts": {
