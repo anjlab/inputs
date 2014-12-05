@@ -32,6 +32,34 @@
   resize: none;
   color: #555555;
 }
+.form-inputs input[type='text']::-webkit-input-placeholder,
+.form-inputs input[type='email']::-webkit-input-placeholder,
+.form-inputs input[type='password']::-webkit-input-placeholder,
+.form-inputs textarea::-webkit-input-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+.form-inputs input[type='text']:-moz-placeholder,
+.form-inputs input[type='email']:-moz-placeholder,
+.form-inputs input[type='password']:-moz-placeholder,
+.form-inputs textarea:-moz-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+.form-inputs input[type='text']::-moz-placeholder,
+.form-inputs input[type='email']::-moz-placeholder,
+.form-inputs input[type='password']::-moz-placeholder,
+.form-inputs textarea::-moz-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+.form-inputs input[type='text']:-ms-input-placeholder,
+.form-inputs input[type='email']:-ms-input-placeholder,
+.form-inputs input[type='password']:-ms-input-placeholder,
+.form-inputs textarea:-ms-input-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
 .form-inputs input[type='text']:-webkit-autofill,
 .form-inputs input[type='email']:-webkit-autofill,
 .form-inputs input[type='password']:-webkit-autofill,
@@ -46,6 +74,34 @@
   box-shadow: 0 1px 0 #66afe9;
   border-color: #66afe9;
   background: #ffffff;
+}
+.form-inputs input[type='text']:focus::-webkit-input-placeholder,
+.form-inputs input[type='email']:focus::-webkit-input-placeholder,
+.form-inputs input[type='password']:focus::-webkit-input-placeholder,
+.form-inputs textarea:focus::-webkit-input-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #999999 !important;
+}
+.form-inputs input[type='text']:focus:-moz-placeholder,
+.form-inputs input[type='email']:focus:-moz-placeholder,
+.form-inputs input[type='password']:focus:-moz-placeholder,
+.form-inputs textarea:focus:-moz-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #999999 !important;
+}
+.form-inputs input[type='text']:focus::-moz-placeholder,
+.form-inputs input[type='email']:focus::-moz-placeholder,
+.form-inputs input[type='password']:focus::-moz-placeholder,
+.form-inputs textarea:focus::-moz-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #999999 !important;
+}
+.form-inputs input[type='text']:focus:-ms-input-placeholder,
+.form-inputs input[type='email']:focus:-ms-input-placeholder,
+.form-inputs input[type='password']:focus:-ms-input-placeholder,
+.form-inputs textarea:focus:-ms-input-placeholder {
+  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #999999 !important;
 }
 .form-inputs input[type='text']:focus + label,
 .form-inputs input[type='email']:focus + label,
@@ -105,54 +161,6 @@
   -webkit-transform: translate(0, 0) scale(1, 1);
       -ms-transform: translate(0, 0) scale(1, 1);
           transform: translate(0, 0) scale(1, 1);
-}
-.form-inputs input::-webkit-input-placeholder,
-.form-inputs textarea::-webkit-input-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 0;
-}
-.form-inputs input:-moz-placeholder,
-.form-inputs textarea:-moz-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 0;
-}
-.form-inputs input::-moz-placeholder,
-.form-inputs textarea::-moz-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 0;
-}
-.form-inputs input:-ms-input-placeholder,
-.form-inputs textarea:-ms-input-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 0;
-}
-.form-inputs input:focus::-webkit-input-placeholder,
-.form-inputs textarea:focus::-webkit-input-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 1;
-}
-.form-inputs input:focus:-moz-placeholder,
-.form-inputs textarea:focus:-moz-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 1;
-}
-.form-inputs input:focus::-moz-placeholder,
-.form-inputs textarea:focus::-moz-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 1;
-}
-.form-inputs input:focus:-ms-input-placeholder,
-.form-inputs textarea:focus:-ms-input-placeholder {
-  font: normal 300 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #999999;
-  opacity: 1;
 }
 .form-inputs input[type='checkbox'] {
   position: absolute;
@@ -236,6 +244,7 @@
   background: #ffffff;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
+  background-clip: padding-box;
 }
 .form-inputs input[type='radio'] + label:after {
   background: #337ab7;

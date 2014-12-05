@@ -14,7 +14,7 @@ input[type='checkbox'] {
       left: 0;
       display: block;
       content: "";
-      border: 2px solid @checkbox-color;
+      border: @checkbox-border-width solid @checkbox-color;
       height: 20px;
       width: 20px;
       border-radius: 2px;
@@ -52,8 +52,8 @@ input[type='checkbox'] {
     }
 
     &:after {
-      border-right: 2px solid @input-bg;
-      border-bottom: 2px solid @input-bg;
+      border-right: @checkbox-mark-width solid @input-bg;
+      border-bottom: @checkbox-mark-width solid @input-bg;
       opacity: 1;
     }
   }

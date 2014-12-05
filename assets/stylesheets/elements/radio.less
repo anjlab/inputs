@@ -15,17 +15,18 @@ input[type='radio'] {
       bottom: 3px;
       display: block;
       content: "";
-      border: 2px solid @radio-color;
+      border: @radio-border-width solid @radio-color;
       height: 16px;
       width: 16px;
       border-radius: 50%;
       background: @input-bg;
       transition: all 0.3s ease;
+      background-clip:padding-box;
     }
 
     &:after {
       background: @radio-checked-color;
-      border: 2px solid @input-bg;
+      border: @radio-border-width solid @input-bg;
       transform: scale(0);
       transition: all 0.3s ease;
     }

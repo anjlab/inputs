@@ -213,6 +213,34 @@ textarea {
   resize: none;
   color: #555555;
 }
+input[type='text']::-webkit-input-placeholder,
+input[type='email']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font: normal 300 100% 'Helvetica Neue';
+  color: #ffffff;
+}
+input[type='text']:-moz-placeholder,
+input[type='email']:-moz-placeholder,
+input[type='password']:-moz-placeholder,
+textarea:-moz-placeholder {
+  font: normal 300 100% 'Helvetica Neue';
+  color: #ffffff;
+}
+input[type='text']::-moz-placeholder,
+input[type='email']::-moz-placeholder,
+input[type='password']::-moz-placeholder,
+textarea::-moz-placeholder {
+  font: normal 300 100% 'Helvetica Neue';
+  color: #ffffff;
+}
+input[type='text']:-ms-input-placeholder,
+input[type='email']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  font: normal 300 100% 'Helvetica Neue';
+  color: #ffffff;
+}
 input[type='text']:-webkit-autofill,
 input[type='email']:-webkit-autofill,
 input[type='password']:-webkit-autofill,
@@ -227,6 +255,34 @@ textarea:focus {
   box-shadow: 0 1px 0 #66afe9;
   border-color: #66afe9;
   background: #ffffff;
+}
+input[type='text']:focus::-webkit-input-placeholder,
+input[type='email']:focus::-webkit-input-placeholder,
+input[type='password']:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  font: normal 300 100% 'Helvetica Neue' !important;
+  color: #999999 !important;
+}
+input[type='text']:focus:-moz-placeholder,
+input[type='email']:focus:-moz-placeholder,
+input[type='password']:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  font: normal 300 100% 'Helvetica Neue' !important;
+  color: #999999 !important;
+}
+input[type='text']:focus::-moz-placeholder,
+input[type='email']:focus::-moz-placeholder,
+input[type='password']:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  font: normal 300 100% 'Helvetica Neue' !important;
+  color: #999999 !important;
+}
+input[type='text']:focus:-ms-input-placeholder,
+input[type='email']:focus:-ms-input-placeholder,
+input[type='password']:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  font: normal 300 100% 'Helvetica Neue' !important;
+  color: #999999 !important;
 }
 input[type='text']:focus + label,
 input[type='email']:focus + label,
@@ -286,54 +342,6 @@ textarea:empty + label {
   -webkit-transform: translate(0, 0) scale(1, 1);
       -ms-transform: translate(0, 0) scale(1, 1);
           transform: translate(0, 0) scale(1, 1);
-}
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 0;
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 0;
-}
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 0;
-}
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 0;
-}
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 1;
-}
-input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 1;
-}
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 1;
-}
-input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder {
-  font: normal 300 100% 'Helvetica Neue';
-  color: #999999;
-  opacity: 1;
 }
 input[type='checkbox'] {
   position: absolute;
@@ -417,6 +425,7 @@ input[type='radio'] + label:after {
   background: #ffffff;
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
+  background-clip: padding-box;
 }
 input[type='radio'] + label:after {
   background: #5bc0de;

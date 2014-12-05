@@ -53,11 +53,11 @@
       </div>
 
       <p>
-          Current CSS styles was inspired by Google Material designs. It uses pure CSS with a minimum number of HTML elements and has size less than 8 kB! The projects uses LESS and have a structured set of HTML input styles. So you can easy use 'standalone' <code>radio</code>/<code>checkbox</code> or <code>select</code> styles in your project.
+          Current CSS styles was inspired by Google Material designs. It uses pure CSS with a minimum number of HTML elements and has size less than 8 kB! The projects uses LESS and have a structured set of HTML input styles. So you can easy use 'standalone' <code>radio</code>/<code>checkbox</code> or <code>select</code> styles in your project. Supports all modern desktop and mobile browsers including IE9+.
       </p>
 
         <h3>How to use it</h3>
-        <p>Just include <code>&lt;framework&gt;-inputs-min.css</code> and <code>inputs-min.js</code> to your project.
+        <p>Just include <code>&lt;framework&gt;-inputs-min.css</code> and <code>inputs-min.js</code> to your project.</p>
         <form class='form-inputs' role='form'>
           <h4>Inputs with <code>text</code> type support.</h4>
           <br>
@@ -246,7 +246,10 @@
 @input-focus-color: #66afe9;
 @checkbox-color: #666;
 @checkbox-checked-color: #5cb85c;
+@checkbox-border-width: 2px;
+@checkbox-mark-width: 2px;
 @radio-color: #666;
+@radio-border-width: 2px;
 @radio-checked-color: #5bc0de;
 </code></pre>
 
@@ -262,7 +265,7 @@
         </div>
 
         <h4>Bootstrap support</h4>
-        <p>Add <code>.inputs</code> class to form and enjoy:<p>
+        <p>Add <code>.inputs</code> class to form and enjoy:</p>
 <pre><code class="html">&lt;form class='inputs' role='form'&gt;
   &lt;div class='form-group'&gt;
   ...

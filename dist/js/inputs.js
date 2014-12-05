@@ -17,7 +17,8 @@
 
   $(window).on('load', function() {
     var isFirefox = typeof InstallTrigger !== 'undefined';
-    if (isFirefox) {
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    if (isFirefox || isIE) {
       $("input[type='text']:not([value]), input[type='email']:not([value]), input[type='password']:not([value])")
           .filter(function() { return $(this).val();}).refresh();
     }
