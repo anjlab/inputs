@@ -41,18 +41,13 @@ gulp.task('js', function() {
  gulp.task('watch', function() {
    gulp.watch(config.lessPath + '/**/*.less', ['css']); 
   gulp.watch(config.jsPath + '/**/*.js', ['js']); 
-  gulp.watch('./dist/docs/*.html', reload);
-});
-
-gulp.task('doc', function() {
-  return gulp.src('./dist/docs/*.html')
-          .pipe(gulp.dest('./'));
+  gulp.watch('./index.html', reload);
 });
 
 gulp.task('serve', ['watch'], function() {
   browserSync({
     server: {
-      baseDir: ['dist/docs', 'dist']
+      baseDir: ['./']
     }
   });
 });
