@@ -1,7 +1,7 @@
 {
   "name": "inputs",
   "version": "1.0.0",
-  "description": "",
+  "description": "HTML form inputs with pure CSS and a little bit JS magic",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

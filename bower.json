@@ -1,9 +1,20 @@
 {
   "name": "inputs",
   "version": "0.9.0",
+  "description": "HTML form inputs with pure CSS and a little bit JS magic",
   "authors": [
     "Nick Zhebrun <nikolay.zhebrun@gmail.com>"
   ],
+  "keywords": [
+    "css",
+    "less",
+    "html",
+    "forms",
+    "inputs",
+    "material",
+    "web"
+  ],
+  "homepage": "http://anjlab.github.io/inputs",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -12,7 +23,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "~3.3.1"
   }
 }
