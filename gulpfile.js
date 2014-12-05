@@ -44,6 +44,11 @@ gulp.task('js', function() {
   gulp.watch('./dist/docs/*.html', reload);
 });
 
+gulp.task('doc', function() {
+  return gulp.src('./dist/docs/*.html')
+          .pipe(gulp.dest('./'));
+});
+
 gulp.task('serve', ['watch'], function() {
   browserSync({
     server: {
