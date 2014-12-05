@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='js/inputs.js'></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+
+      $(document).on('click', '#framework a', function() {
+        $('#framework link').remove();
+        if ($(this).data('framework')) {
+          $('#framework').append("<link href='" + $(this).data('framework') + "' rel='stylesheet'>");
+        }
+        $('#framework').append("<link href='" + $(this).data('css') + "' rel='stylesheet'>");
+      });
+
+      $(window).on('load', function() {
+        if(___browserSync___ && ___browserSync___.socket) {
+          ___browserSync___.socket.on('input:text', function(e){
+            $($(e.tagName)[e.index]).val(e.value).refresh();
+          })
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class='container'>
+      <p>
+          Current CSS styles was inspired by Google Material designs. It uses pure CSS with a minimum number of HTML elements and has size less than 8 kB! The projects uses LESS and have a structured set of HTML input styles. So you can easy use 'standalone' <code>radio</code>/<code>checkbox</code> or <code>select</code> styles in your project.
+      </p>
+
+        <h3>How to use it</h3>
+        <p>Just include <code>&lt;framework&gt;-inputs-min.css</code> and <code>inputs-min.js</code> to your project.
+        <form class='form-inputs' role='form'>
+          <h4>Inputs with <code>text</code> type support.</h4>
+          <br>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <input type='text' id="input1" placeholder='Type your first name'>
+                <label for="input1">First Name</label>
+              </div>
+
+              <div class='form-group'>
+                <input type='text' id="input2">
+                <label for="input2">Last Name or Surname</label>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<p>You can use <code>placeholder</code> attribute to set placeholder. <strong>Warning:</strong> You must place <code>label</code> element right after <code>input</code> element.</p>
+
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;input type='text' id=&quot;input1&quot; placeholder='Type your first name'&gt;
+  &lt;label for=&quot;input1&quot;&gt;First Name&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <input type='text' id="input11" class='error'>
+                <label for="input11">Birtday</label>
+                <span class='help-block'>MM/DD/YYYY</span>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<p>You can add <code>.error</code> class to input to show error state. Add <code>.help-block</code> element to show error message.</p>
+
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;input type='text' id=&quot;input2&quot; class='error'&gt;
+  &lt;label for=&quot;input2&quot;&gt;Birtday&lt;/label&gt;
+  &lt;span class='help-block'&gt;MM/DD/YYYY&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <h4>Inputs with <code>email</code>, <code>password</code> type support.</h4>
+          <br>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <input type='email' id="email1">
+                <label for="email1">Email</label>
+              </div>
+
+              <div class='form-group'>
+                <input type='password' id="password1">
+                <label for="password1">Password</label>
+                <span class='help-block'>Enter at least 8 symbols</span>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<p>Use <code>.help-block</code> element to show hints.</p>
+
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;input type='password' id=&quot;password1&quot;&gt;
+  &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
+  &lt;span class='help-block'&gt;Enter at least 8 symbols&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <h4><code>Textarea</code> input support.</h4>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <textarea id="input3" rows=3>Looks good</textarea>
+                <label for="input3">Describe Youself</label>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;textarea id=&quot;input3&quot; rows=3&gt;&lt;/textarea&gt;
+  &lt;label for=&quot;input3&quot;&gt;Describe Youself&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <h4><code>Select</code> input support.</h4>
+          <br>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class="form-group select">
+                <select id='select1'>
+                  <option value="1">Custom</option>
+                  <option value="2">Foundation</option>
+                  <option value="3">Pure</option>
+                  <option value="4">UIKit</option>
+                </select>
+                <label for='select1'>Best CSS framework</label>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<p>You should add <code>.select</code> class to parent element.</p>
+<pre><code class="html">&lt;div class=&quot;form-group select&quot;&gt;
+  &lt;select id='select1'&gt;
+    &lt;option&gt;...&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;label for='select1'&gt;Best CSS framework&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <h4>Inputs with <code>checkbox</code> type support.</h4>
+          <br>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <input type='checkbox' id='input4'>
+                <label for="input4">Check if you like it</label>
+              </div>
+
+              <div class='form-group'>
+                <input type='checkbox' id='input41' checked>
+                <label for="input41">Check if you impressed</label>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;input type='checkbox' id='input4'&gt;
+  &lt;label for=&quot;input4&quot;&gt;Check if you like it&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+
+          <h4>Inputs with <code>radio</code> type support.</h4>
+          <br>
+          <div class='row pure-g'>
+            <div class='col-sm-3 pure-u-1-3 large-3 columns'>
+              <div class='form-group'>
+                <input type='radio' id='input5' name='radio' checked>
+                <label for="input5">Option one is for serious guys</label>
+              </div>
+              <div class='form-group'>
+                <input type='radio' id='input6' name='radio'>
+                <label for="input6">Option two is for not serious guys</label>
+              </div>
+              <div class='form-group'>
+                <input type='radio' id='input7' name='radio'>
+                <label for="input7">Option three is for crazy guys</label>
+              </div>
+            </div>
+            <div class='col-sm-9 pure-u-1-3 large-9 columns'>
+<p>You can make inline radio/checkboxes by removing <code>.form-group</code> wrapper.</p>
+<pre><code class="html">&lt;div class='form-group'&gt;
+  &lt;input type='radio' id='input5' name='radio' checked&gt;
+  &lt;label for=&quot;input5&quot;&gt;Option one is for serious guys&lt;/label&gt;
+&lt;/div&gt;
+...
+</code></pre>
+            </div>
+          </div>
+        </form>
+
+        <h3>Javascript functions</h3>
+        <p>If you change input value programaticaly you run into problem that label is freezes. To fix it run <code>refresh()</code> method on the input:</p>
+<pre><code class="js">$('#input1').val('new value').refresh();
+</code></pre>
+
+        <h3>Customization</h3>
+        <p>You can customize controls using overriding the following LESS variables:<p>
+<pre><code class="less">@label-color: #555;
+@label-font: 'Helvetica Neue';
+@input-font: 'Helvetica Neue';
+@placeholder-font: normal 300 100% 'Helvetica Neue';
+@placeholder-color: #999;
+@help-color: #999;
+@error-color: #a94442;
+@input-border: #ccc;
+@input-bg: #fff;
+@input-color: #555;
+@input-focus-color: #66afe9;
+@checkbox-color: #666;
+@checkbox-checked-color: #5cb85c;
+@radio-color: #666;
+@radio-checked-color: #5bc0de;
+</code></pre>
+
+        <h3>CSS Frameworks Support</h3>
+        <p>Inputs doesn't rely on some specific CSS framework so you can easily use it in any CSS framework as you like. For example:</p>
+        <div id='framework' style="margin: 15px 0">
+          <link href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css' rel='stylesheet'>
+          <link href='css/bootstrap-inputs.css' rel='stylesheet'>
+
+          <a href='#generic' data-framework='' data-css='css/generic-inputs.css' class='button btn btn-primary pure-button'>Use without any CSS framework</a>
+          <a href='#bootstrap' data-framework='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css' data-css='css/bootstrap-inputs.css' class='button btn btn-warning pure-button'>Use with Bootstrap</a>
+          <a href='#pure' data-framework='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css' data-css='css/generic-inputs.css' class='button btn btn-default pure-button'>Use with Pure CSS</a>
+        </div>
+
+        <h4>Bootstrap support</h4>
+        <p>Add <code>.inputs</code> class to form and enjoy:<p>
+<pre><code class="html">&lt;form class='inputs' role='form'&gt;
+  &lt;div class='form-group'&gt;
+  ...
+</code></pre>
+
+
+      <hr>
+      <p>Coded by Nick Zhebrun. <a href='anjlab.com'>AnjLab</a>, 2014.</p>
+      <br>
+      </div>
+    </div>
+  </body>
+</html>

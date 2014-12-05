@@ -1,0 +1,120 @@
+// Text inputs
+
+.form-group {
+  position:relative;
+}
+
+label {
+  color: @label-color;
+  font-family: @label-font;
+  font-weight: 400;
+  cursor: text;
+  transform: translate(0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.help-block {
+  font-family: @label-font;
+  font-size: 75%;
+  margin-top: 3px;
+  color: @help-color;
+   -webkit-font-smoothing: antialiased;
+}
+
+input[type='text'], input[type='email'], input[type='password'], textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid @input-border;
+  margin: 1.25em 0 0 0;
+  border-radius: 0;
+  padding: 0;
+  font-family: @input-font;
+  resize: none;
+  color: @input-color;
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 1000px white inset;
+  }
+
+  &:focus {
+    outline:none;
+    box-shadow: 0 1px 0 @input-focus-color;
+    border-color: @input-focus-color;
+    background: @input-bg;
+  }
+
+  &:focus, &[value] {
+    & + label {
+      transform: translate(-12.5%, -1.5em) scale(0.75, 0.75) !important;
+    }
+  }
+
+  &:-webkit-autofill {
+    & + label {
+      transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
+    }
+  }
+
+  & + label {
+    width: 100%;
+    position:absolute;
+    left:0;
+    top: 1.25em;
+    margin-bottom: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.error {
+    border-color: @error-color;
+    box-shadow: 0 1px 0 @error-color;
+
+    & ~ .help-block {
+      color: @error-color;
+    }
+  }
+}
+
+textarea {
+  &:focus + label, &[value] + label {
+    top: 1.25em;
+  }
+
+  & + label {
+    margin-bottom: 5px;
+    transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
+  }
+
+  &:empty + label {
+    transform: translate(0, 0) scale(1, 1);
+  }
+}
+
+.placeholder(@opacity: 0) {
+  font: @placeholder-font;
+  color: @placeholder-color;
+  opacity: @opacity;
+}
+
+.placeholder-prefix(@opacity) {
+  &::-webkit-input-placeholder {
+    .placeholder(@opacity);
+  }
+  &:-moz-placeholder {
+    .placeholder(@opacity);
+  }
+  &::-moz-placeholder {
+    .placeholder(@opacity);
+  }
+  &:-ms-input-placeholder {
+    .placeholder(@opacity);
+  }
+}
+
+input, textarea {
+  .placeholder-prefix(0);
+
+  &:focus {
+    .placeholder-prefix(1);
+  }
+}
+

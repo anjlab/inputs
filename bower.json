@@ -1,0 +1,18 @@
+{
+  "name": "inputs",
+  "version": "0.9.0",
+  "authors": [
+    "Nick Zhebrun <nikolay.zhebrun@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}

@@ -1,0 +1,21 @@
+@import "variables";
+
+@label-color: @input-color;
+@label-font: @font-family-sans-serif;
+@input-font: @font-family-sans-serif;
+@input-focus-color: @input-border-focus;
+@help-color: @input-color-placeholder;
+@error-color: @state-danger-text;
+@placeholder-font: normal 300 100% @font-family-sans-serif;
+@placeholder-color: @input-color-placeholder;
+@checkbox-color: @input-color;
+@checkbox-checked-color: @brand-primary;
+@radio-color: @input-color;
+@radio-checked-color: @brand-primary;
+
+.form-inputs {
+  @import "elements/input";
+  @import "elements/checkbox";
+  @import "elements/radio";
+  @import "elements/select";
+}

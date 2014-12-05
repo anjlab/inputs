@@ -1,0 +1,57 @@
+// Select
+
+.select {
+  width: 100%;
+  overflow: hidden;
+
+  &:after {
+    bottom: 1px;
+    right: 5px;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: @input-border;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+  }
+
+  label {
+    position: absolute;
+    font-size: 75%;
+    left: 0;
+    top: 0;
+  }
+
+  select {
+    padding: 1.5em 0 1px 0;
+    color: @label-color;
+    font-family: @label-font;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    width: 106%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid @input-border;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+
+    &:focus {
+      padding-bottom: 0px;
+      border-bottom: 2px solid @input-focus-color;
+      outline: none;
+    }
+
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+  }
+}

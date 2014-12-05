@@ -1,0 +1,60 @@
+// Checkbox inputs
+
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    user-select: none;
+    cursor: pointer;
+    padding-left: 30px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      display: block;
+      content: "";
+      border: 2px solid @checkbox-color;
+      height: 20px;
+      width: 20px;
+      border-radius: 2px;
+      background: @input-bg;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 5px;
+      left: 7px;
+      width: 6px;
+      height: 13px;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      transition-delay: 0.1s;
+      box-sizing: border-box;
+    }
+  }
+
+  &:focus + label {
+    &:before {
+      box-shadow: 0 0 5px @checkbox-checked-color;
+    }
+  }
+
+  &:checked + label {
+    &:before {
+      background: @checkbox-checked-color;
+      border-color: @checkbox-checked-color;
+    }
+
+    &:after {
+      border-right: 2px solid @input-bg;
+      border-bottom: 2px solid @input-bg;
+      opacity: 1;
+    }
+  }
+}
