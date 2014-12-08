@@ -57,6 +57,16 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
     }
   }
 
+  &[disabled] {
+    color: @disabled-color;
+    background-color: @input-bg;
+    border-style: dashed;
+
+    & + label {
+      color: @disabled-color;
+    }
+  }
+
   & + label {
     width: 100%;
     position:absolute;

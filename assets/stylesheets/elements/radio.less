@@ -47,4 +47,20 @@ input[type='radio'] {
       transform: scale(0.75, 0.75);
     }
   }
+
+  &[disabled] {
+    & + label {
+      color: @disabled-color;
+
+      &:before {
+        border-color: @disabled-color;
+      }
+    }
+
+    &:checked + label {
+      &:before, &:after {
+        background: @disabled-color;
+      }
+    }
+  }
 }

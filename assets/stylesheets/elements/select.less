@@ -49,6 +49,16 @@
       outline: none;
     }
 
+    &[disabled] {
+      color: @disabled-color;
+      background-color: @input-bg;
+      border-bottom: 1px dashed @disabled-color;
+
+      & + label {
+        color: @disabled-color;
+      }
+    }
+
     &:-moz-focusring {
       color: transparent;
       text-shadow: 0 0 0 #000;

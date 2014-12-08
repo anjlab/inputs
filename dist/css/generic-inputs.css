@@ -303,6 +303,20 @@ textarea:-webkit-autofill + label {
   -webkit-transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
           transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
 }
+input[type='text'][disabled],
+input[type='email'][disabled],
+input[type='password'][disabled],
+textarea[disabled] {
+  color: #cccccc;
+  background-color: #ffffff;
+  border-style: dashed;
+}
+input[type='text'][disabled] + label,
+input[type='email'][disabled] + label,
+input[type='password'][disabled] + label,
+textarea[disabled] + label {
+  color: #cccccc;
+}
 input[type='text'] + label,
 input[type='email'] + label,
 input[type='password'] + label,
@@ -399,6 +413,15 @@ input[type='checkbox']:checked + label:after {
   border-bottom: 2px solid #ffffff;
   opacity: 1;
 }
+input[type='checkbox'][disabled] + label {
+  color: #cccccc;
+}
+input[type='checkbox'][disabled] + label:before {
+  border-color: #cccccc;
+}
+input[type='checkbox'][disabled]:checked + label:before {
+  background: #cccccc;
+}
 input[type='radio'] {
   position: absolute;
   opacity: 0;
@@ -447,6 +470,16 @@ input[type='radio']:checked + label:after {
       -ms-transform: scale(0.75, 0.75);
           transform: scale(0.75, 0.75);
 }
+input[type='radio'][disabled] + label {
+  color: #cccccc;
+}
+input[type='radio'][disabled] + label:before {
+  border-color: #cccccc;
+}
+input[type='radio'][disabled]:checked + label:before,
+input[type='radio'][disabled]:checked + label:after {
+  background: #cccccc;
+}
 .select {
   width: 100%;
   overflow: hidden;
@@ -492,6 +525,14 @@ input[type='radio']:checked + label:after {
   padding-bottom: 0px;
   border-bottom: 2px solid #66afe9;
   outline: none;
+}
+.select select[disabled] {
+  color: #cccccc;
+  background-color: #ffffff;
+  border-bottom: 1px dashed #cccccc;
+}
+.select select[disabled] + label {
+  color: #cccccc;
 }
 .select select:-moz-focusring {
   color: transparent;

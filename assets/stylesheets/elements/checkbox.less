@@ -57,4 +57,20 @@ input[type='checkbox'] {
       opacity: 1;
     }
   }
+
+  &[disabled] {
+    & + label {
+      color: @disabled-color;
+
+      &:before {
+        border-color: @disabled-color;
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background: @disabled-color;
+      }
+    }
+  }
 }

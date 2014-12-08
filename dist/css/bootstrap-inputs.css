@@ -122,6 +122,20 @@
   -webkit-transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
           transform: translate(-12.5%, -1.5em) scale(0.75, 0.75);
 }
+.form-inputs input[type='text'][disabled],
+.form-inputs input[type='email'][disabled],
+.form-inputs input[type='password'][disabled],
+.form-inputs textarea[disabled] {
+  color: #cccccc;
+  background-color: #ffffff;
+  border-style: dashed;
+}
+.form-inputs input[type='text'][disabled] + label,
+.form-inputs input[type='email'][disabled] + label,
+.form-inputs input[type='password'][disabled] + label,
+.form-inputs textarea[disabled] + label {
+  color: #cccccc;
+}
 .form-inputs input[type='text'] + label,
 .form-inputs input[type='email'] + label,
 .form-inputs input[type='password'] + label,
@@ -218,6 +232,15 @@
   border-bottom: 2px solid #ffffff;
   opacity: 1;
 }
+.form-inputs input[type='checkbox'][disabled] + label {
+  color: #cccccc;
+}
+.form-inputs input[type='checkbox'][disabled] + label:before {
+  border-color: #cccccc;
+}
+.form-inputs input[type='checkbox'][disabled]:checked + label:before {
+  background: #cccccc;
+}
 .form-inputs input[type='radio'] {
   position: absolute;
   opacity: 0;
@@ -266,6 +289,16 @@
       -ms-transform: scale(0.75, 0.75);
           transform: scale(0.75, 0.75);
 }
+.form-inputs input[type='radio'][disabled] + label {
+  color: #cccccc;
+}
+.form-inputs input[type='radio'][disabled] + label:before {
+  border-color: #cccccc;
+}
+.form-inputs input[type='radio'][disabled]:checked + label:before,
+.form-inputs input[type='radio'][disabled]:checked + label:after {
+  background: #cccccc;
+}
 .form-inputs .select {
   width: 100%;
   overflow: hidden;
@@ -311,6 +344,14 @@
   padding-bottom: 0px;
   border-bottom: 2px solid #66afe9;
   outline: none;
+}
+.form-inputs .select select[disabled] {
+  color: #cccccc;
+  background-color: #ffffff;
+  border-bottom: 1px dashed #cccccc;
+}
+.form-inputs .select select[disabled] + label {
+  color: #cccccc;
 }
 .form-inputs .select select:-moz-focusring {
   color: transparent;
