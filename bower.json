@@ -1,6 +1,6 @@
 {
   "name": "inputs",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "HTML form inputs with pure CSS and a little bit JS magic",
   "authors": [
     "Nick Zhebrun <nikolay.zhebrun@gmail.com>"

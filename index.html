@@ -31,7 +31,7 @@
       <a href="https://github.com/anjlab/inputs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
       <br>
       <div class="jumbotron">
-        <h1>Inputs 0.9.1</h1>
+        <h1>Inputs 0.9.2</h1>
         <p>HTML form inputs with pure CSS and a little bit JS magic.</p>
         <ul class='list-inline'>
           <li>
@@ -57,18 +57,18 @@
       </p>
 
         <h3>How to use it</h3>
-        <p>Just include <code>&lt;framework&gt;-inputs-min.css</code> and <code>inputs-min.js</code> to your project.</p>
+        <p>Just include <code>&lt;framework&gt;-inputs-min.css</code> and <code>inputs-min.js</code> to your project and wrap your inputs with <code>.input</code> element.</p>
         <form class='form-inputs' role='form'>
           <h4>Inputs with <code>text</code> type support.</h4>
           <br>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='text' id="input1" placeholder='Type your first name'>
                 <label for="input1">First Name</label>
               </div>
 
-              <div class='form-group'>
+              <div class='input'>
                 <input type='text' id="input2" value='tests'>
                 <label for="input2">Last Name or Surname</label>
               </div>
@@ -76,7 +76,7 @@
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
 <p>You can use <code>placeholder</code> attribute to set placeholder. <strong>Warning:</strong> You must place <code>label</code> element right after <code>input</code> element.</p>
 
-<pre><code class="html">&lt;div class='form-group'&gt;
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;input type='text' id=&quot;input1&quot; placeholder='Type your first name'&gt;
   &lt;label for=&quot;input1&quot;&gt;First Name&lt;/label&gt;
 &lt;/div&gt;
@@ -86,12 +86,12 @@
 
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='text' id="input11" class='error'>
                 <label for="input11">Birtday</label>
                 <span class='help-block'>MM/DD/YYYY</span>
               </div>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='text' id="input12" value='Disabled Field' disabled="disabled">
                 <label for="input12">Disabled</label>
               </div>
@@ -99,7 +99,7 @@
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
 <p>You can add <code>.error</code> class to input to show error state. Add <code>.help-block</code> element to show error message.</p>
 
-<pre><code class="html">&lt;div class='form-group'&gt;
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;input type='text' id=&quot;input2&quot; class='error'&gt;
   &lt;label for=&quot;input2&quot;&gt;Birtday&lt;/label&gt;
   &lt;span class='help-block'&gt;MM/DD/YYYY&lt;/span&gt;
@@ -112,12 +112,12 @@
           <br>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='email' id="email1">
                 <label for="email1">Email</label>
               </div>
 
-              <div class='form-group'>
+              <div class='input'>
                 <input type='password' id="password1">
                 <label for="password1">Password</label>
                 <span class='help-block'>Enter at least 8 symbols</span>
@@ -126,7 +126,7 @@
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
 <p>Use <code>.help-block</code> element to show hints.</p>
 
-<pre><code class="html">&lt;div class='form-group'&gt;
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;input type='password' id=&quot;password1&quot;&gt;
   &lt;label for=&quot;password1&quot;&gt;Password&lt;/label&gt;
   &lt;span class='help-block'&gt;Enter at least 8 symbols&lt;/span&gt;
@@ -138,13 +138,13 @@
           <h4><code>Textarea</code> input support.</h4>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <textarea id="input3" rows=3>Looks good</textarea>
                 <label for="input3">Describe Youself</label>
               </div>
             </div>
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
-<pre><code class="html">&lt;div class='form-group'&gt;
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;textarea id=&quot;input3&quot; rows=3&gt;&lt;/textarea&gt;
   &lt;label for=&quot;input3&quot;&gt;Describe Youself&lt;/label&gt;
 &lt;/div&gt;
@@ -156,7 +156,7 @@
           <br>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class="form-group select">
+              <div class="input select">
                 <select id='select1'>
                   <option value="1">Custom</option>
                   <option value="2">Foundation</option>
@@ -168,7 +168,7 @@
             </div>
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
 <p>You should add <code>.select</code> class to parent element.</p>
-<pre><code class="html">&lt;div class=&quot;form-group select&quot;&gt;
+<pre><code class="html">&lt;div class=&quot;input select&quot;&gt;
   &lt;select id='select1'&gt;
     &lt;option&gt;...&lt;/option&gt;
   &lt;/select&gt;
@@ -182,18 +182,18 @@
           <br>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='checkbox' id='input4'>
                 <label for="input4">Check if you like it</label>
               </div>
 
-              <div class='form-group'>
+              <div class='input'>
                 <input type='checkbox' id='input41' checked>
                 <label for="input41">Check if you impressed</label>
               </div>
             </div>
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
-<pre><code class="html">&lt;div class='form-group'&gt;
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;input type='checkbox' id='input4'&gt;
   &lt;label for=&quot;input4&quot;&gt;Check if you like it&lt;/label&gt;
 &lt;/div&gt;
@@ -205,22 +205,22 @@
           <br>
           <div class='row pure-g'>
             <div class='col-sm-3 pure-u-1-3 large-3 columns'>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='radio' id='input5' name='radio' checked>
                 <label for="input5">Option one is for serious guys</label>
               </div>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='radio' id='input6' name='radio'>
                 <label for="input6">Option two is for not serious guys</label>
               </div>
-              <div class='form-group'>
+              <div class='input'>
                 <input type='radio' id='input7' name='radio'>
                 <label for="input7">Option three is for crazy guys</label>
               </div>
             </div>
             <div class='col-sm-9 pure-u-1-3 large-9 columns'>
-<p>You can make inline radio/checkboxes by removing <code>.form-group</code> wrapper.</p>
-<pre><code class="html">&lt;div class='form-group'&gt;
+<p>You can make inline radio/checkboxes by removing <code>.input</code> wrapper.</p>
+<pre><code class="html">&lt;div class='input'&gt;
   &lt;input type='radio' id='input5' name='radio' checked&gt;
   &lt;label for=&quot;input5&quot;&gt;Option one is for serious guys&lt;/label&gt;
 &lt;/div&gt;
@@ -268,13 +268,6 @@
           <a href='#bootstrap' data-framework='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/css/bootstrap.min.css' data-css='dist/css/bootstrap-inputs.css' class='button btn btn-warning pure-button'>Use with Bootstrap</a>
           <a href='#pure' data-framework='//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css' data-css='dist/css/generic-inputs.css' class='button btn btn-default pure-button'>Use with Pure CSS</a>
         </div>
-
-        <h4>Bootstrap support</h4>
-        <p>Add <code>.inputs</code> class to form and enjoy:</p>
-<pre><code class="html">&lt;form class='inputs' role='form'&gt;
-  &lt;div class='form-group'&gt;
-  ...
-</code></pre>
 
 
       <hr>
