@@ -24,4 +24,4 @@
     }
   });
 
-}(jQuery);
+}(Zepto || jQuery || $);
